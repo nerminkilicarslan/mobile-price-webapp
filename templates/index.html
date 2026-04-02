@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Price Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <main class="container">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">MP</div>
+          <div>
+            <h1>Mobile Price Classifier</h1>
+            <p>20 özellik ile fiyat aralığı tahmini (0–3)</p>
+          </div>
+        </div>
+        <a class="pill" href="/docs" target="_blank" rel="noreferrer">API Docs</a>
+      </header>
+
+      <section class="card">
+        <div class="card-title">
+          <h2>Girdi değerleri</h2>
+          <p>Alanları doldurup tahmin alabilirsiniz.</p>
+        </div>
+
+        <form id="predictForm" class="grid" autocomplete="off">
+          <div id="fieldsMount" class="fields-mount"></div>
+
+          <div class="actions">
+            <button id="predictBtn" class="btn" type="submit">Tahmin et</button>
+            <button id="fillExampleBtn" class="btn secondary" type="button">
+              Örnek doldur
+            </button>
+            <button id="clearBtn" class="btn ghost" type="button">Temizle</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-title">
+          <h2>Sonuç</h2>
+          <p>Modelin döndürdüğü sınıf ve olasılıklar</p>
+        </div>
+
+        <div id="status" class="status idle">Hazır</div>
+
+        <div class="result">
+          <div class="result-main">
+            <div class="result-kpi">
+              <div class="kpi-label">Tahmin edilen sınıf</div>
+              <div id="predClass" class="kpi-value">-</div>
+            </div>
+            <div class="result-kpi">
+              <div class="kpi-label">En yüksek olasılık</div>
+              <div id="topProb" class="kpi-value">-</div>
+            </div>
+          </div>
+
+          <div class="probs">
+            <div class="probs-title">Sınıf olasılıkları</div>
+            <div id="probBars" class="prob-bars"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>FastAPI + PyTorch</span>
+        <span class="muted">Model dosyaları: <code>artifacts/</code></span>
+      </footer>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
