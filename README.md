@@ -5,7 +5,7 @@ Bu proje, PyTorch ile eğitilmiş mobil cihaz fiyat aralığı sınıflandırma 
 ## Klasör yapısı
 
 - `app/`: API ve model kodu
-- `artifacts/`: `mobile_model.pth` ve `scaler.pkl` buraya konmalı
+- `artifacts/`: `mobile_model.pth` ve `scaler.pkl` 
 - `templates/`: HTML şablonları
 - `static/`: CSS/JS
 
@@ -18,18 +18,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Model dosyalarını ekleme
-
-`mobile_model.pth` ve `scaler.pkl` dosyalarını şu klasöre kopyalayın:
-
-- `artifacts/mobile_model.pth`
-- `artifacts/scaler.pkl`
-
 ## Çalıştırma
 
 ```bash
 uvicorn app.main:app --reload
-```
 
 Arayüz:
 - `http://127.0.0.1:8000`
