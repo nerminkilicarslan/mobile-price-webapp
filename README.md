@@ -29,11 +29,13 @@ pip install -r requirements.txt
 
 ```bash
 uvicorn app.main:app --reload
-```
 
 Arayüz:
 - `http://127.0.0.1:8000`
 
 API:
 - `POST http://127.0.0.1:8000/api/predict`
+
+```<img width="1452" height="795" alt="1" src="https://github.com/user-attachments/assets/933b7c18-d2e8-4ec7-a292-83fdc69221e4" />
+<img width="1458" height="795" alt="2" src="https://github.com/user-attachments/assets/6a808fb8-52e0-4b37-9ff7-610d248b064b" />
 
